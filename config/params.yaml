@@ -1,0 +1,15 @@
+horizonte_dias: 7
+ventana_entrenamiento_dias: 270
+cuantiles: [0.1, 0.5, 0.9]
+validacion:
+  n_folds: 3
+lightgbm:
+  n_estimators: 150
+  learning_rate: 0.1
+  num_leaves: 63
+  min_child_samples: 50
+  subsample: 0.8
+  subsample_freq: 1
+  colsample_bytree: 0.8
+  random_state: 42
+  verbose: -1
