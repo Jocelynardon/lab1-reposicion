@@ -1,0 +1,7 @@
+.venv
+.git
+data
+models
+reports
+airflow/logs
+__pycache__
