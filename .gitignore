@@ -8,3 +8,4 @@ models/*
 airflow/logs/
 .claude/worktrees/
 __pycache__/
+/models

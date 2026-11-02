@@ -1,6 +1,6 @@
 horizonte_dias: 7
 ventana_entrenamiento_dias: 270
-cuantiles: [0.1, 0.5, 0.9]
+cuantiles: [0.1, 0.25, 0.5, 0.75, 0.9]
 validacion:
   n_folds: 3
 lightgbm:
@@ -13,3 +13,6 @@ lightgbm:
   colsample_bytree: 0.8
   random_state: 42
   verbose: -1
+promocion:
+  mejora_costo_min: 0.02
+  cobertura_min: 0.70
