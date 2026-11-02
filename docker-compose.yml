@@ -1,6 +1,7 @@
 x-airflow-common: &airflow-common
   build: .
   image: lab1-airflow:3.3.1
+  user: "${AIRFLOW_UID:-50000}:0"
   environment:
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
     AIRFLOW__CORE__LOAD_EXAMPLES: "false"
