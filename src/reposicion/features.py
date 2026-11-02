@@ -60,7 +60,7 @@ def construir_features(datos, fecha_corte, horizonte: int, ventana: int):
     for nombre, m in mats.items():
         largo[nombre] = m.to_numpy(dtype="float32").ravel()
 
-    largo["dow"] = largo["date"].dt.dayofweek
+    largo["dow"] = largo["date"].dt.day_of_week
     largo["dom"] = largo["date"].dt.day
     largo["month"] = largo["date"].dt.month
     largo["feriado"] = largo["date"].isin(_feriados(datos["holidays"])).astype("int8")
