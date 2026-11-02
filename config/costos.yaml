@@ -1,0 +1,4 @@
+﻿# Costos de negocio (por unidad). Cambiarlos modifica el pedido sugerido sin tocar el codigo.
+costos:
+  quiebre: 3.0   # costo de quedarse sin producto
+  merma: 1.0     # costo de que sobre producto
