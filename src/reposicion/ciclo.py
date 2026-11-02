@@ -91,10 +91,10 @@ def promocionar(landing, historico, corte, costos, params, base="models"):
     return fila
 
 
-def publicar(landing, historico, corte, costos, params, salida="data/publicado", base="models"):
+def publicar(landing, historico, corte, costos, params, salida="data/publicado", base="models", version=None):
     """Pronostico por cuantiles y pedido sugerido con la informacion disponible al corte."""
     corte = pd.Timestamp(corte)
-    version = campeon(base)
+    version = version or campeon(base)
     if version is None:
         raise RuntimeError("No hay modelo campeon: ejecute 'promocionar' primero")
     datos = cargar_asof(landing, historico, corte)
