@@ -38,7 +38,7 @@ Principio: **toda predicción usa solo lo que estaba disponible en su fecha de c
    cp /ruta/descargas/{train,stores,holidays_events,oil,transactions}.csv data/kaggle/
    ```
 
-3. **Linux o macOS:** `echo "AIRFLOW_UID=$(id -u)" > .env` (Windows no lo necesita).
+3. **Crear la carpeta de logs.** Linux o macOS: `mkdir -p airflow/logs && echo "AIRFLOW_UID=$(id -u)" > .env`. Windows: `mkdir airflow\logs`.
 4. **Construir y levantar Airflow 3.3.1:**
 
    ```bash
@@ -47,7 +47,7 @@ Principio: **toda predicción usa solo lo que estaba disponible en su fecha de c
    docker compose up -d
    ```
 
-   La interfaz queda en http://localhost:8080 (modo de administrador abierto, solo para desarrollo local; no pide usuario).
+   La interfaz queda en http://localhost:8080 (modo de administrador abierto, solo para desarrollo local; no pide usuario). Antes del paso siguiente espere 30 a 60 segundos hasta que `docker compose exec airflow-scheduler airflow dags list` muestre los 5 DAGs; si se ejecuta el paso 5 antes, falla con `DagNotFound`.
 5. **Generar el sistema de origen** (carga histórica hasta 2017-06-30 y bandeja de julio de 2017). Ejecute el DAG `preparar_origen` desde la interfaz o con:
 
    ```bash
