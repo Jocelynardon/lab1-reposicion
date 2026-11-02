@@ -1,0 +1,6 @@
+pandas
+pyarrow
+pyyaml
+lightgbm
+scikit-learn
+pytest
