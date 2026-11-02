@@ -1,6 +1,10 @@
 .venv/
-data/
-models/
+data/*
+!data/*.dvc
+!data/.gitignore
+models/*
+!models/*.dvc
+!models/.gitignore
 airflow/logs/
 .claude/worktrees/
 __pycache__/

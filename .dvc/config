@@ -1,0 +1,4 @@
+[core]
+    remote = local
+['remote "local"']
+    url = E:\Galileo\2604\dvc-remote
